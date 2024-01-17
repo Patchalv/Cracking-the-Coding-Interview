@@ -7,10 +7,6 @@ B) What if you cannot use additional data structures
 
 */
 
-const string1 = 'a1b2c3d4e5';
-const string2 = 'abcdeeffg';
-//Outcome: boolean true or false
-
 const isUnique = (string) => {
     for (let i = 0; i < string.length; i++) {
         for (let j = 0; j < string.length; j++) {
@@ -25,5 +21,5 @@ Time: O(n2) due to nested for loops
 Space: O(1)
 */
 
-console.log(isUnique(string1)); // true
-console.log(isUnique(string2)); // false
+console.log('Actual:', isUnique('a1b2c3d4e5'), '//  Desired: true');
+console.log('Actual:', isUnique('abcdeeffg'), '//  Desired: false');

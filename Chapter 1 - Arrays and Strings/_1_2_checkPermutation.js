@@ -39,5 +39,5 @@ const checkPermutation = (stringA, stringB) => {
     return true;
 };
 
-console.log(checkPermutation(string1, string2)); // true
-console.log(checkPermutation(string3, string4)); // false
+console.log('Actual:', checkPermutation('abcd', 'dacb'), '//  Desired: true');
+console.log('Actual:', checkPermutation('test', 'ttew'), '//  Desired: false');
