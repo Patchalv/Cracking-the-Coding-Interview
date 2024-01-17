@@ -4,11 +4,6 @@ CHECK PERMUTATION
 Given two strings, write a method to decide if one is a permutation of the other.
 */
 
-let string1 = 'abcd';
-let string2 = 'dacb';
-let string3 = "test";
-let string4 = "ttew";
-
 const checkPermutation = (stringA, stringB) => {
 
     // Create object as hash table.
@@ -38,6 +33,14 @@ const checkPermutation = (stringA, stringB) => {
 
     return true;
 };
+
+/*
+n = length of stringA. m = length of stringB. 
+
+TIME: O(n+m)
+SPACE: O(1)
+
+*/
 
 console.log('Actual:', checkPermutation('abcd', 'dacb'), '//  Desired: true');
 console.log('Actual:', checkPermutation('test', 'ttew'), '//  Desired: false');
