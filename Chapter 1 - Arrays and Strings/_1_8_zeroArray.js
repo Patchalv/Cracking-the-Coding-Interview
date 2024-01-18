@@ -18,6 +18,13 @@ const testMatrixB = [
     [6, 7, 0]
 ];
 
+const testMatrixC = [
+    [0, 1, 2, 3],
+    [4, 5, 6, 6],
+    [7, 8, 9, 0],
+    [2, 3, 4, 5]
+];
+
 const zeroArray = (matrix) => {
     const numOfRows = matrix.length;
     const numOfCols = matrix[0].length;
@@ -39,11 +46,7 @@ const zeroArray = (matrix) => {
         
         for (j = 0; j < numOfCols; j++) {
             
-            if (i in rowsToZero) {
-                arrayRow[j] = 0;
-            };
-            
-            if (j in colsToZero) {
+            if (rowsToZero.includes(i) || colsToZero.includes(j)) {
                 arrayRow[j] = 0;
             };
             
@@ -55,4 +58,3 @@ const zeroArray = (matrix) => {
     console.log('Zerod Matrix: ', matrix);
 };
 zeroArray(testMatrixA);
-zeroArray(testMatrixB);
